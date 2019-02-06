@@ -1,4 +1,4 @@
-Search film podcastas synced by redis backend.
+Search film podcasts synced by redis backend.
 
 ```sh
 pip install -r requirements.txt
