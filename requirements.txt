@@ -1,0 +1,6 @@
+requests
+peewee
+flask
+flask_rq2
+bs4
+lxml
