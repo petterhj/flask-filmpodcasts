@@ -1,0 +1,11 @@
+id,name,short_name,feed_url,color
+1,Film Junk Podcast,fjp,http://feeds.feedburner.com/filmjunk,00C3E2
+2,Film Club,fcp,http://filmclub.podomatic.com/rss2.xml,e91e63
+3,The /Filmcast Podcast,sfc,http://feeds.feedburner.com/filmcast,4caf50
+4,We Hate Movies,whm,http://www.whmpodcast.com/feeds/posts/default?alt=rss,ff9800
+5,Directors Club Podcast,dcp,http://directorsclubpodcast.libsyn.com/rss,913535
+6,FilmSack,fsp,http://feeds.frogpants.com/filmsack_feed.xml,9572e6
+7,Filmfrelst,ffr,http://filmfrelst.no/rss/,F60000
+8,I Saw That Years Ago,sya,http://isawthatyearsago.com/rss,6d6d6d
+9,Double Feature,dfp,https://doublefeature.fm/category/podcast/feed/,C14390
+10,F This Movie!,ftm,http://feeds.feedburner.com/FThisMovie,3855FF

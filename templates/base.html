@@ -1,0 +1,56 @@
+<html>
+ <head>
+  <title>Filmpodcasts{% block title %}{% endblock %}</title>
+
+  <link rel="shortcut icon" href="{{ url_for('static', filename='watchlist.png') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#131F35">
+
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.1.0.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='handlebars-v4.0.12.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='moment.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='jquery.mark.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='utils.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Monda|Unica+One|Alegreya:400italic,400|Abril+Fatface|Vollkorn" rel="stylesheet" type="text/css">
+  <link type="text/css" href="{{ url_for('static', filename='material-design-iconic-font.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" type="text/css">
+ </head>
+
+ <body>
+  <!-- Stats -->
+  <div id="stats">
+   <span class="podcasts"></span>
+   <span class="episodes"></span>
+   <span class="synced"></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+   <div class="podcasts">
+    {% for podcast in podcasts %}
+     <div class="podcast" title="{{podcast.name}} ({{podcast.episode_count}})" data-podcast-id="{{podcast.id}}">
+      <img src="{{url_for('static', filename='coverart/'+podcast.short_name+'.jpg')}}">
+      <span class="title" style="border-color: #{{podcast.color}};">{{podcast.name}}</span>
+     </div>
+     <!-- <span class="podcast" data-podcast-id="{{podcast.id}}" style="border-color: #{{podcast.color}};">{{podcast.name}}<span>{{podcast.episode_count}}</span></span> -->
+    {% endfor %}
+   </div>
+   <div class="search">
+    <input type="text" name="query" placeholder="Title"> 
+    <button name="search" class="green"><i class="zmdi zmdi-search"></i><span class="desktop">Search</span></button>
+    <button name="clear" class="red"><i class="zmdi zmdi-close"></i> <span class="desktop">Clear</span></button>
+   </div>
+   {% block nav %}{% endblock %}
+  </nav>
+
+  <!-- Container -->
+  <div class="container">
+   {% block content %}{% endblock %}
+  </div>
+
+  <!-- Templates -->
+  {% block templates %}{% endblock %}
+ </body>
+</html>
